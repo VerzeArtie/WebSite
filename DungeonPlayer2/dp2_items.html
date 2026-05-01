@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+    <!-- Basic SEO -->
+  <meta name="description" content="Dungeon Player2 の公式ページ。ゲーム情報、操作説明、ダウンロードなどを掲載しています。">
+  <meta name="keywords" content="Dungeon Player2, DungeonPlayer, AltomoSoft, ゲーム, ダンジョン">
+  <meta name="author" content="AltomoSoft">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dungeon Player2 - AltomoSoft">
+  <meta property="og:description" content="Dungeon Player2 の公式ページ。ゲーム情報、操作説明、ダウンロードなどを掲載しています。">
+  <meta property="og:type" content="website">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dungeon Player2 - アイテム一覧</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    /* Items page styles (keeps look similar to dp2_top but responsive grid) */
+    body { font-family: system-ui, -apple-system, "Noto Sans JP", "Hiragino Kaku Gothic Pro", "MS PGothic", Meiryo, sans-serif; margin:0; padding:0; background:#f6f8fb; color:#111827 }
+    .page { padding:24px; max-width:1200px; margin:0 auto; }
+    .page-header { text-align:center; margin-bottom:18px; color:#FFFFFF }
+    .page-header h1{ margin:0; font-size:1.6rem }
+    .lead { color:#666; margin-top:6px; font-size:0.95rem }
+
+    .controls { display:flex; gap:8px; align-items:center; justify-content:flex-end; margin-bottom:12px }
+    .controls .filter { padding:6px 10px; border-radius:6px; border:1px solid #ddd; background:#fff }
+
+    .items-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px }
+    .item-card{ background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.06); overflow:hidden; display:flex; flex-direction:column }
+    .item-thumb{ background:#f4f6f8; padding:18px; display:flex; align-items:center; justify-content:center }
+    /* thumbnail background variants by rarity */
+    .item-thumb.common{ background:#f4f6f8 }
+    .item-thumb.uncommon{ background:#b7e34a }
+    .item-thumb.rare{ background:#1e3a8a }
+    .item-thumb.unique{ background:#ffff00 }
+    .item-thumb img{ max-width:100%; height:auto; width:96px; height:96px; object-fit:contain }
+    .item-body{ padding:12px; flex:1; display:flex; flex-direction:column }
+    .item-title{ display:flex; align-items:center; gap:8px; margin-bottom:8px }
+    .item-title h3{ margin:0; font-size:1.05rem }
+    .badge{ font-size:0.75rem; padding:4px 8px; border-radius:999px; background:#eee; color:#333 }
+    .item-type{ color:#5b6; font-weight:600; font-size:0.85rem }
+    .item-desc{ color:#444; font-size:0.9rem; margin:8px 0; flex:1 }
+    .item-stats{ display:flex; gap:8px; flex-wrap:wrap }
+    .stat{ background:#f3f7fb; padding:6px 8px; border-radius:6px; font-size:0.85rem; color:#114a7a }
+    .card-footer{ display:flex; justify-content:space-between; align-items:center; gap:8px; padding:12px; border-top:1px solid #f0f0f0 }
+    .btn{ background:#2b6cb0; color:#fff; padding:8px 10px; border-radius:6px; text-decoration:none; font-weight:600 }
+
+    @media (max-width:480px){ .controls{ justify-content:space-between } .page{ padding:12px } }
+  </style>
+</head>
+<body class="page page-dark">
+  <header class="page-header">
+    <h1>アイテム一覧</h1>
+  </header>
+
+  <section class="items-grid" aria-live="polite">
+    <article class="item-card">
+      <div class="item-thumb"><img src="images/Icon_Onehand_Sword.png" alt="ファイン・ソード"></div>
+      <div class="item-body">
+        <div class="item-title"><h3>ファイン・ソード</h3><span class="badge">コモン</span></div>
+        <div class="item-type">武器 - 剣</div>
+        <p class="item-desc">標準的な剣。一般的な冒険者にとっては安心して使える。</p>
+        <div class="item-stats">
+          <span class="stat">物理攻撃力 4～7</span>
+        </div>
+        <div class="card-footer">
+          <div class="meta">650 GOLD</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <div class="item-thumb"><img src="images/Icon_Onehand_Rod.png" alt="ファイン・ロッド"></div>
+      <div class="item-body">
+        <div class="item-title"><h3>ファイン・ロッド</h3><span class="badge">コモン</span></div>
+        <div class="item-type">武器 - 杖</div>
+        <p class="item-desc">標準的な杖。一般的な冒険者にとっては安心して使える。</p>
+        <div class="item-stats">
+          <span class="stat">魔法攻撃力 4～7</span>
+        </div>
+        <div class="card-footer">
+          <div class="meta">650 GOLD</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <div class="item-thumb uncommon"><img src="images/Icon_Accessory.png" alt="【力】のペンダント"></div>
+      <div class="item-body">
+        <div class="item-title"><h3>【力】のペンダント</h3><span class="badge">アンコモン</span></div>
+        <div class="item-type">アクセサリ</div>
+        <p class="item-desc">赤色のペンダント。僅かな【力】を感じ取る事が出来る。</p>
+        <div class="item-stats">
+          <span class="stat">力 +5</span>
+        </div>
+        <div class="card-footer">
+          <div class="meta">1200 GOLD</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <div class="item-thumb uncommon"><img src="images/Icon_Shield.png" alt="カイト・シールド"></div>
+      <div class="item-body">
+        <div class="item-title"><h3>カイト・シールド</h3><span class="badge">アンコモン</span></div>
+        <div class="item-type">盾</div>
+        <p class="item-desc">上部が丸みを帯びている盾。重さが軽量化されているが防御力は一般品よりも高い。</p>
+        <div class="item-stats">
+          <span class="stat">物理防御力 +5</span>
+        </div>
+        <div class="card-footer">
+          <div class="meta">1020 GOLD</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <div class="item-thumb rare"><img src="images/Icon_Accessory.png" alt="ブルー・ウィザード・ハット"></div>
+      <div class="item-body">
+        <div class="item-title"><h3>ブルー・ウィザード・ハット</h3><span class="badge">レア</span></div>
+        <div class="item-type">アクセサリ</div>
+        <p class="item-desc">高貴なる青の帽子は魔法使いの力の源でもある。【氷】属性からの魔法ダメージを軽減し、かつ、【氷】属性による魔法ダメージを増強する。</p>
+        <div class="item-stats">
+          <span class="stat">【技】 +2</span>
+          <span class="stat">【知】 +5</span>
+          <span class="stat">氷耐性 +10%</span>
+          <span class="stat">氷増幅 +5%</span>
+        </div>
+        <div class="card-footer">
+          <div class="meta">2500 GOLD</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <div class="item-thumb unique"><img src="images/BlueOrbIcon.png" alt="遠見の青水晶"></div>
+      <div class="item-body">
+        <div class="item-title"><h3>遠見の青水晶</h3><span class="badge">貴重品</span></div>
+        <div class="item-type">貴重品</div>
+        <p class="item-desc">水晶の奥を深くのぞき込む事で、対象の地点へワープする事が出来る。ダンジョン内から町へ帰還する際に用いる。</p>
+        <div class="item-stats">
+          <span class="stat">１日につき１回使用可</span>
+        </div>
+        <div class="card-footer">
+          <div class="meta">非売品</div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <footer style="text-align:center;margin:28px 0;color:#666;font-size:0.9rem">© 2026 AltomoSoft</footer>
+
+</body>
+</html>

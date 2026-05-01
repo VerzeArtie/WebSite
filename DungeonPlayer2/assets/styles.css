@@ -1,0 +1,79 @@
+﻿/* Base modern stylesheet for DungeonPlayer2 converted site */
+:root{
+  --bg:#0b0f14;
+  --panel:#0f1720;
+  --muted:#9aa6b2;
+  --accent:#7dd3fc;
+  --accent-2:#a78bfa;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Meiryo UI', Meiryo, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;background:var(--bg);color:#e6eef6}
+.app{display:flex;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:linear-gradient(180deg,var(--panel),#091018);padding:20px;display:flex;flex-direction:column;}
+.sidebar .brand{font-weight:700;font-size:1.25rem;margin-bottom:12px}
+.menu-frame-wrap{flex:1;overflow:hidden;border-radius:8px;background:var(--glass)}
+.menu-frame-wrap iframe{width:100%;height:100%;border:0}
+.sidebar-footer{font-size:1.0rem;color:var(--muted);margin-top:12px}
+.content{flex:1;display:flex;flex-direction:column}
+.content-header{display:flex;align-items:center;gap:12px;padding:12px 18px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent)}
+.menu-toggle{display:none;background:transparent;border:0;color:var(--accent);font-size:1.2rem}
+.site-title{margin:0;font-size:1rem}
+.page-counter{margin-left:auto;color:rgba(230,238,246,0.8);font-size:0.85rem;padding:4px 8px;border-radius:6px;background:rgba(255,255,255,0.02)}
+.content-frame-wrap{flex:1;padding:18px;overflow:auto}
+.content-frame-wrap iframe{width:100%;height:100%;min-height:60vh;border:0;border-radius:8px;background:#061018}
+
+/* page content styles (for dp2_top and menu) */
+.page{padding:24px}
+.page-dark{background:transparent}
+.hero{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.hero-logo{max-width:400px;width:100%;height:auto;border-radius:8px}
+.hero-lead{color:var(--primary);max-width:120ch}
+.gallery{margin:18px 0}
+.screenshot{width:100%;max-width:800px;border-radius:10px;display:block}
+.news{display:flex;gap:20px;align-items:flex-start}
+.cards{display:flex;flex-direction:column;gap:12px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:8px}
+.news-aside img{max-width:160px;border-radius:8px}
+.page-footer{margin-top:24px;color:var(--muted)}
+
+/* dp2_menu specific styles (applies when menu is loaded via iframe but also if opened directly) */
+.menu-body{margin:0;padding:12px;color:#eef}
+.menu{display:flex;flex-direction:column;gap:12px}
+.menu-brand a{color:var(--accent);text-decoration:none;font-weight:700}
+.menu ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.menu li a{color:#dfeffd;text-decoration:none;padding:6px 8px;border-radius:6px;display:block}
+.menu li.section{color:var(--muted);padding:6px 8px}
+.menu li.sub{color:var(--muted);padding-left:14px}
+.menu-footer{margin-top:12px;color:var(--muted);font-size:0.85rem}
+.menu a:hover{background:rgba(125,211,252,0.06)}
+
+/* responsive: off-canvas sidebar for small screens */
+@media (max-width:900px){
+  .menu-toggle{display:block}
+
+  .sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:260px;
+    max-width:80%;
+    padding:16px;
+    background:linear-gradient(180deg,var(--panel),#091018);
+    transform:translateX(-110%);
+    transition:transform .28s ease;
+    z-index:40;
+    box-shadow: 4px 0 18px rgba(0,0,0,0.5);
+  }
+
+  body.menu-open .sidebar{ transform: translateX(0); }
+
+  .overlay{ display:none; }
+  body.menu-open .overlay{ display:block; position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:30 }
+
+  .menu-frame-wrap{height:calc(100vh - 120px); overflow:auto; -webkit-overflow-scrolling:touch}
+  .content{margin-left:0}
+  .content-frame-wrap{padding:12px}
+  .sidebar-footer{font-size:0.85rem}
+}

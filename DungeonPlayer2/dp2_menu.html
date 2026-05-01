@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="GENERATOR" content="JustSystems Homepage Builder Version 17.0.1.0 for Windows">
+  <link rel="stylesheet" href="assets/styles.css">
+  <title>Menu</title>
+</head>
+<body class="menu-body">
+<nav class="menu">
+  <div class="menu-brand"><a href="dp2_top.html" target="right">Top</a></div>
+  <ul>
+    <li><a href="dp2_information.html" target="right">【お知らせ】</a></li>
+<br>
+  <li class="section">・ゲームシステム</li>
+  <li><a href="dp2_gamesystem.html" target="right">基本システム</a></li>
+<br>
+  <li class="section">・キャラクター</li>
+  <li><a href="dp2_ein.html" target="right">アイン・ウォーレンス</a></li>
+  <li><a href="dp2_lana.html" target="right">ラナ・アミリア</a></li>
+  <li><a href="dp2_billy.html" target="right">ビリー・ラキ</a></li>
+  <li><a href="dp2_eone.html" target="right">エオネ・フルネア</a></li>
+  <li><a href="dp2_adel.html" target="right">アデル・ブリガンディ</a></li>
+<br>
+		 <li class="section">・アイテム</li>
+		 <li>
+			 <a href="dp2_items.html" target="right">アイテム一覧</a>
+		 </li>
+<br>
+  <li class="section">・パラメタ</li>
+  <li><a href="dp2_param_core.html" target="right">コア</a></li>
+  <li><a href="dp2_param_battle.html" target="right">戦闘値</a></li>
+<br>
+  <li class="section">・コマンド</li>
+  <li class="sub">魔法</li>
+  <li><a href="dp2_spell_fire.html" target="right">【炎】</a></li>
+  <li><a href="dp2_spell_ice.html" target="right">【氷】</a></li>
+  <li><a href="dp2_spell_light.html" target="right">【聖】</a></li>
+  <li><a href="dp2_spell_shadow.html" target="right">【闇】</a></li>
+  <li class="sub">スキル</li>
+  <li><a href="dp2_skill_warrior.html" target="right">【戦士】</a></li>
+  <li><a href="dp2_skill_guardian.html" target="right">【護衛】</a></li>
+  <li><a href="dp2_skill_martialarts.html" target="right">【格闘】</a></li>
+  <li><a href="dp2_skill_archery.html" target="right">【弓術】</a></li>
+	<br>
+　<br>
+	<li><a href="diary.html" target="right">開発者日記</a></li>
+
+ </ul>
+
+</nav>
+
+<script>
+  // If this menu is embedded inside the main shell, hijack link clicks
+  // and load pages into the parent's contentFrame to keep the menu persistent.
+  (function(){
+    try {
+      var parentDoc = window.parent && window.parent.document;
+      var contentFrame = parentDoc && parentDoc.getElementById && parentDoc.getElementById('contentFrame');
+      if (!contentFrame) return; // not embedded, keep default behavior
+
+      function handleClick(e){
+        var a = e.currentTarget;
+        var href = a.getAttribute('href');
+        if (!href) return;
+        // allow mailto and anchors to behave normally
+        if (href.indexOf('mailto:') === 0 || href.indexOf('#') === 0) return;
+        e.preventDefault();
+        contentFrame.src = href;
+      }
+
+      var anchors = document.querySelectorAll('a[href]');
+      anchors.forEach(function(a){
+        a.addEventListener('click', handleClick, false);
+        a.addEventListener('click', function(){
+          try{ if (window.parent && window.parent.document) {
+            var ov = window.parent.document.getElementById('overlay');
+            window.parent.document.body.classList.remove('menu-open');
+            if (ov) ov.style.display = 'none';
+          }}catch(e){}
+        }, false);
+      });
+    } catch (err) {
+      // ignore cross-origin or other errors
+    }
+  })();
+</script>
+
+</body>
+</html>

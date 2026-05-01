@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DungeonPlayer2 日記</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    /* diary-specific styles */
+    .diary-hero{padding:28px 18px;border-radius:8px;margin-bottom:18px;background:linear-gradient(90deg, rgba(167,139,250,0.06), rgba(125,211,252,0.03));}
+    .diary-list{display:flex;flex-direction:column;gap:14px}
+    .diary-entry{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:8px}
+    .diary-meta{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
+    .diary-title{font-weight:700;margin:0 0 6px 0}
+    .diary-body{white-space:pre-wrap;color:#e6eef6}
+    .new-entry{margin-top:18px}
+    .btn{background:var(--accent);color:#04121a;padding:8px 12px;border-radius:6px;border:0;cursor:pointer}
+  </style>
+</head>
+<body class="page page-dark">
+  <header class="content-header" style="position:sticky;top:0;z-index:5;background:rgba(6,16,24,0.6);backdrop-filter:blur(4px);">
+    <h1 class="site-title">開発者日記</h1>
+  </header>
+
+  <main class="content-frame-wrap">
+    <section class="diary-list" id="diaryList">
+      <!-- Sample entries -->
+      <article class="diary-entry">
+        <div class="diary-meta">2026-04-04 — 他ゲームプレイ感想</div>
+        <h3 class="diary-title">Europa Universalis V</h3>
+        <div class="diary-body">
+　　　　2025年11月ごろに発売されたEuropa Universalis Vというゲームをプレイしているが、
+　　　　いまだに感触がつかめない。自分はParadox社の大ファンというわけではないので、過去作品を
+　　　　あまりやったことはなく、このシリーズはVが始めて。某社にしては過去最高傑作の部類だと思われるが、
+　　　　嬉しい側面と、少し残念な側面がある。
+　　　　
+　　　　Europa Universalis V
+　　　　https://www.paradoxinteractive.com/games/europa-universalis-v/about
+
+　　　　さて、1回では書ききれないので、日記は次に繋げるような形にしていこう。
+　　　　まず大枠からリストアップしてみるか。
+　　　　　・戦闘／外交／内政／開拓など
+　　　　　・攻略性／拡張性／発展性など
+　　　　　・直観／論理／コアなど
+　　　　自分は結構独断と偏見に満ちてるので、一般的なセンスでは解説はできない。
+　　　　あと勝ちゲームに突出した最強理論というのも苦手である。
+　　　　どちらかというとマイポリシーを持って、楽しくやる方が好きなので、
+　　　　そういう観点で書いていこうと思う。
+　　　　
+　　　　ちょっとだけ書くと（長くならないように・・・）
+　　　　まず内政なんだが、大分わかりやすい印象。本社の別タイトルであるVictoriaをイメージすればよく
+　　　　特産品や一般的な生産物を建設していけば大筋儲かるようになっている。たとえあTuscanyなら
+　　　　Fine Clothを増やせばよい。理由はテックツリーでそれに対するボーナスがあるからだ。
+　　　　あと、Provinceをコントロールする事が重要だが、幸いTuscanyはArezzo以外は普通に領土を保てているので
+　　　　あまり気にしなくてよい。首都であるエリアも最初から充実しているので、収益はプラスからスタートできる。
+　　　　全ての国を分析はしてないが、下手するとこのゲーム赤字覚悟で突っ切らないといけない国もありそう。
+　　　　なので、最初は収益性が準備されている国を選ぶといいだろう。内政がないと戦闘も外交も開拓もままならない。
+　　　　これはどのシミュレーションゲームも共通だと思うので、覚えておこう。
+					
+　　　　ダメだな、全然書けないな。長くなりそうだ。
+　　　　では、また次回。
+				</div>
+      </article>
+      <article class="diary-entry">
+        <div class="diary-meta">2026-04-02 — 雑多</div>
+        <h3 class="diary-title">日記スタート</h3>
+        <div class="diary-body">
+        なんとなくで始めてみようと思った開発者日記。特にカテゴリは設けるつもりはないが、
+        全方位だと大変になるのである程度方針は決めておこうと思う。
+　　　　- DungeonPlayer開発関連
+　　　　- 他ゲームプレイ感想（ゲームを悪く言う事は絶対しない！）
+　　　　- なんか色々（決して、全方位ではない）
+
+　　　　ということで、最初は「なんか色々」で行こう。最初はDungeonPlayer関連とも思ったが、
+　　　　なんとなく、とりあえず「なんか色々」にしておこう。
+　　　　昨今感じるのは、アナログ的表現があまり好ましくないという社会全体の風潮だろうか。
+　　　　数値で分かるように、ハッキリと論理的に、感嘆を示す表現はいらない。
+　　　　それはプログラミングをする時は絶大な威力を発揮するんだけど、
+　　　　人と喋る時ってあまり威力を発揮しない。
+　　　　　「あの件って、今どのぐらいなの？」
+　　　　　「それって、マジすごいのか？ちょっと見てみたい。」
+　　　　　「えーと、次何する？時間ありそう？」
+　　　　と、そんな感じなので、自分はあまり解析し過ぎずに雰囲気的に会話するように心がけている。
+　　　　プログラムは正規直行とか、論理学とか、哲学（Not宗教）最強なので、デジタル値が便利なんだけど
+　　　　人の意志って結構アナログで、言葉と言動と行動が全部バラけてたりする。別にそれは悪くはない。むしろ普通。
+　　　　で、一字一句が分析されて、数値化されて、論理的に判断されるというのは日常的には稀なんじゃないかと。
+　　　　「それが整ってる人の方が優秀」っていう説もあるんだけど、それってこういう終着点じゃないかな。
+
+　　　　　「人間よりも、アンドロイドが良いよね」
+
+　　　　AI、いや、それよりもっと以前からだろうか。そもそも論でいうと、結構昔から
+　　　　そういう願望が人間にはあるんじゃないかな。良し悪しはここでは書かない。
+　　　　というわけで唐突にゲーム紹介だ。
+　　　　DETROIT: BECOME HUMAN
+　　　　https://www.quanticdream.com/en/detroit-become-human
+　　　　
+　　　　これだな。これ創った奴らはAI出てくる前からかなりイメージしていたに違いない。
+　　　　良い意味でいえば、キッチリコミュニケーションできる対象があると人間的に心地よい。
+　　　　悪い意味でいえば、キッチリコミュニケーションできる対象があると人間不要論になる。
+　　　　まあ本作はそういう意図で描いたわけじゃないと思うけど、そういうテーマも感じる。
+　　　　２０２６年４月突入ということで、この先どうなるか、ちょっと予見していこうと思う。
+　　　　別に預言者でもなんでもないので、気になったエッセンスは拾ってみていこうかと。
+
+　　　　では、また次回。
+　　　　</div>
+      </article>
+
+    </section>
+
+  </main>
+
+
+</body>
+</html>
