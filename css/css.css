@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* Unified stylesheet (css.css) — reset + layout + components */
+
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+  --radius:10px;
+  --max-width:1100px;
+  --pad:16px;
+}
+
+/* Basic reset */
+* , *::before, *::after { box-sizing: border-box; }
+html,body{ height:100%; margin:0; padding:0 }
+body{
+  font: 14px/1.6 "Noto Sans JP", "Hiragino Kaku Gothic Pro", Osaka, "MS PGothic", Verdana, Arial, sans-serif;
+  background:var(--bg);
+  color:#313131;
+}
+img{ display:block; max-width:100%; height:auto; }
+a{ color:var(--accent); text-decoration:none; transition: color .25s; }
+a:hover{ color:#174d7a }
+
+/* Layout pattern: full-bleed band + inner centered container */
+.container{ margin:0 auto }
+.full-bleed{ width:100%; }
+.inner{ max-width:var(--max-width); margin:0 auto; padding:var(--pad); }
+
+/* Header — simple, left-aligned brand */
+header{ background:transparent; padding:0; text-align:center }
+header .inner{ padding-left:0; padding-right:0 }
+header h1{ margin:0; font-weight:700; font-size:1.4rem; letter-spacing:0.5px; display:inline-block }
+header a.brand{ color:var(--accent); display:inline-block }
+
+/* Nav — one-row responsive */
+nav{ border-top:1px solid rgba(0,0,0,0.06); border-bottom:1px solid rgba(0,0,0,0.06); }
+nav .inner{ padding-left:0; padding-right:0 }
+nav ul{ display:flex; gap:10px; list-style:none; margin:0; padding:0; width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch }
+nav ul li{ flex:1 1 0; margin:0 }
+nav ul li a{ display:block; padding:10px 12px; background:var(--card); color:var(--accent); border-radius:8px; text-align:center; border:1px solid rgba(43,108,176,0.08); }
+nav ul li a:hover{ background:var(--accent); color:#fff }
+
+/* Article grid */
+main .inner{ padding-left:0; padding-right:0 }
+article{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:18px }
+section{ background:var(--card); padding:14px; border-radius:10px; box-shadow:0 4px 12px rgba(15,23,42,0.04) }
+section .date{ display:block; color:#fff; font-size:13px; margin-bottom:8px; background:#000; padding:4px 8px; border-radius:6px }
+section h1{ margin:0 0 8px 0; font-size:1.1rem }
+section p{ margin:0 }
+
+/* Footer */
+footer{ background:#313131; color:#fff; text-align:center; padding:10px 0 }
+footer .inner{ padding-left:0; padding-right:0 }
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .inner{ padding:12px }
+  nav ul{ gap:6px }
+}
+
+/* Back-compat (legacy selectors) — neutralize float-based old rules if present */
+header h1, header p, nav li, section, article, header{ float:none !important; width:auto !important; margin:0 !important; }
+
