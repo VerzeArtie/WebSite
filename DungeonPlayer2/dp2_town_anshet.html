@@ -6,14 +6,24 @@
 	<title>アンシェット街 - Dungeon Player2</title>
 	<link rel="stylesheet" href="assets/styles.css">
 	<style>
+:root{
+		--bg:#e6eef6;
+		--panel:#ffffff;
+		--border:#d7dee6;
+		--text:#0b0f14;
+		--sub:#667088;
+		--accent:#2b6cb0;
+}
 		.page{max-width:980px;margin:24px auto;padding:18px}
-		.hero{background:#0b1220;border-radius:12px;padding:18px;color:#e6eef6;display:flex;gap:18px;align-items:center}
-		.hero img{width:220px;height:140px;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
+		.hero{background:var(--panel);border-radius:12px;padding:18px;color:var(--text);display:flex;gap:18px;align-items:center;box-shadow:0 1px 0 var(--border)}
+		.hero img{width:220px;height:140px;object-fit:cover;border-radius:8px;border:1px solid var(--border)}
 		.hero h1{margin:0;font-size:1.4rem}
-		.lead{color:#aab6c2;margin-top:8px}
-		.section{margin-top:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);border-radius:10px;padding:14px;color:#dfeffb}
-		.muted{color:#aab6c2;font-size:0.95rem}
+		.lead{color:var(--sub);margin-top:8px}
+		.section{margin-top:18px;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent);border:1px solid var(--border);border-radius:10px;padding:14px;color:var(--text);background-color:var(--panel)}
+		.muted{color:var(--sub);font-size:0.95rem}
 		ul.features{margin:8px 0 0 18px}
+		.meta{color:var(--sub);font-size:0.9rem;margin-bottom:25px}
+		.concept{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:30px}
 	</style>
 </head>
 <body class="page page-dark">
