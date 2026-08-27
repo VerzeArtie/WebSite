@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://altomosoft.com/sitemap.xml
+Sitemap: https://altomosoft.com/dungeonplayer2/sitemap.xml

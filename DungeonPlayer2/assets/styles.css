@@ -77,3 +77,44 @@ html,body{height:100%;margin:0;font-family: 'Meiryo UI', Meiryo, 'Hiragino Kaku 
   .content-frame-wrap{padding:12px}
   .sidebar-footer{font-size:0.85rem}
 }
+
+/* ===== inlined navigation shell (iframe frameset removed) ===== */
+html,body{height:auto;min-height:100%}
+.content{min-width:0}
+.content-body{padding:24px}
+.site-title{font-weight:700}
+.site-title a{color:#e6eef6;text-decoration:none}
+.content-header{position:sticky;top:0;z-index:20;background:#0b0f14;border-bottom:1px solid rgba(255,255,255,0.06)}
+.store-link{margin-left:auto;color:#04202b;background:var(--accent);text-decoration:none;font-size:.85rem;font-weight:700;padding:6px 12px;border-radius:6px;white-space:nowrap}
+.store-link:hover{background:#a5e3ff}
+.sidebar .brand a{color:inherit;text-decoration:none}
+.menu-scroll{flex:1;overflow-y:auto;margin:0 -8px;padding:0 8px}
+.menu li a.active{background:rgba(125,211,252,0.12);color:var(--accent)}
+.skip-link{position:absolute;left:-9999px}
+.skip-link:focus{left:8px;top:8px;z-index:60;background:var(--accent);color:#04202b;padding:8px 12px;border-radius:6px}
+.content-body img{max-width:100%;height:auto}
+
+@media (min-width:901px){
+  .sidebar{position:sticky;top:0;height:100vh}
+}
+@media (max-width:900px){
+  .content-body{padding:14px}
+  .sidebar{overflow-y:auto}
+  .store-link{font-size:.78rem;padding:5px 9px}
+}
+
+/* ===== command tables (spell / skill pages, formerly styled by css/*.css) ===== */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 24px}
+.job__title{margin:22px 0 10px;font-size:1.2rem;color:var(--accent)}
+.job__table{border-collapse:collapse;width:100%;min-width:760px;font-size:.9rem;background:rgba(255,255,255,0.02)}
+.job__table th,.job__table td{border:1px solid rgba(255,255,255,0.12);padding:8px 10px;vertical-align:middle}
+.job__table thead th{background:rgba(125,211,252,0.10);color:#dfeffd;text-align:center;font-weight:700;position:sticky;top:0}
+.job__table td.cast,.job__table td.recast{white-space:nowrap}
+.job__table img{max-width:56px;height:auto;vertical-align:middle}
+.skill__wrapper{display:flex;align-items:center;gap:10px}
+.skill__wrapper font{font-size:1rem}
+.jobguide,.job__content,.job__content__wrapper{background:transparent;width:auto}
+
+.sidebar-footer .social{margin-top:6px}
+.sidebar-footer .social a{color:var(--accent);text-decoration:none}
+.sidebar-footer .social a:hover{text-decoration:underline}

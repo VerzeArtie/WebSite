@@ -1,0 +1,52 @@
+/* Page-scoped styles.
+   Restored from the per-page <style> blocks that existed before the
+   iframe frameset was removed. Scoped with a .page-* class on
+   .content-body so they cannot collide with the shared nav/shell. */
+
+/* ---------- dp2_items.html ---------- */
+.page-items .page-header{text-align:center;margin-bottom:18px;color:#e6eef6}
+.page-items .page-header h1{margin:0;font-size:1.6rem}
+.page-items .lead{color:var(--muted);margin-top:6px;font-size:0.95rem}
+.page-items .controls{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-bottom:12px}
+.page-items .controls .filter{padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);color:#e6eef6}
+.page-items .items-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:1200px;margin:0 auto}
+.page-items .item-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.page-items .item-thumb{background:#f4f6f8;padding:18px;display:flex;align-items:center;justify-content:center}
+.page-items .item-thumb.common{background:#f4f6f8}
+.page-items .item-thumb.uncommon{background:#b7e34a}
+.page-items .item-thumb.rare{background:#1e3a8a}
+.page-items .item-thumb.epic{background:#9b59b6}
+.page-items .item-thumb.unique{background:#ffff00}
+.page-items .item-thumb img{width:96px;height:96px;object-fit:contain}
+.page-items .item-body{padding:12px;flex:1;display:flex;flex-direction:column}
+.page-items .item-title{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.page-items .item-title h3{margin:0;font-size:1.05rem;color:#dfeffd}
+.page-items .badge{font-size:0.75rem;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,0.10);color:#dfeffd;white-space:nowrap}
+.page-items .item-type{color:var(--accent);font-weight:600;font-size:0.85rem}
+.page-items .item-desc{color:#c7d3de;font-size:0.9rem;margin:8px 0;flex:1}
+.page-items .item-stats{display:flex;gap:8px;flex-wrap:wrap}
+.page-items .stat{background:rgba(125,211,252,0.10);padding:6px 8px;border-radius:6px;font-size:0.85rem;color:#9fdcff}
+.page-items .card-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.08)}
+.page-items .card-footer .meta{color:#e8c98a;font-size:0.9rem;font-weight:700}
+.page-items .card-footer .meta2{color:var(--muted);font-size:0.85rem}
+
+/* ---------- dp2_town_anshet.html / dp2_dungeon_esmiliagrassfield.html ---------- */
+.page-area .page{max-width:980px;margin:0 auto;padding:0}
+.page-area .hero{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:12px;padding:18px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.page-area .hero img{width:220px;height:140px;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,0.12)}
+.page-area .hero h1{margin:0;font-size:1.4rem}
+.page-area .lead{color:var(--muted);margin-top:8px}
+.page-area .section{margin-top:18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.10);border-radius:10px;padding:14px}
+.page-area .muted{color:var(--muted);font-size:0.95rem}
+.page-area ul.features,.page-area ul.items{margin:8px 0 0 18px}
+.page-area .meta{color:var(--muted);font-size:0.9rem;margin-bottom:25px}
+.page-area .concept{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:12px;padding:30px}
+
+/* ---------- diary.html ---------- */
+.page-diary .diary-hero{padding:28px 18px;border-radius:8px;margin-bottom:18px;background:linear-gradient(90deg,rgba(167,139,250,0.06),rgba(125,211,252,0.03))}
+.page-diary .diary-list{display:flex;flex-direction:column;gap:14px}
+.page-diary .diary-entry{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:16px;border-radius:8px}
+.page-diary .diary-meta{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
+.page-diary .diary-title{font-weight:700;margin:0 0 6px 0}
+.page-diary .diary-body{white-space:pre-wrap;color:#e6eef6}
+.page-diary .content-frame-wrap{padding:0;overflow:visible}

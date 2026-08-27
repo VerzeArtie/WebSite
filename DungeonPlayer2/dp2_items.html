@@ -1,58 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-    <!-- Basic SEO -->
-  <meta name="description" content="Dungeon Player2 の公式ページ。ゲーム情報、操作説明、ダウンロードなどを掲載しています。">
-  <meta name="keywords" content="Dungeon Player2, DungeonPlayer, AltomoSoft, ゲーム, ダンジョン">
-  <meta name="author" content="AltomoSoft">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Dungeon Player2 - AltomoSoft">
-  <meta property="og:description" content="Dungeon Player2 の公式ページ。ゲーム情報、操作説明、ダウンロードなどを掲載しています。">
-  <meta property="og:type" content="website">
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dungeon Player2 - アイテム一覧</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <style>
-    /* Items page styles (keeps look similar to dp2_top but responsive grid) */
-    body { font-family: system-ui, -apple-system, "Noto Sans JP", "Hiragino Kaku Gothic Pro", "MS PGothic", Meiryo, sans-serif; margin:0; padding:0; background:#f6f8fb; color:#111827 }
-    .page { padding:24px; max-width:1200px; margin:0 auto; }
-    .page-header { text-align:center; margin-bottom:18px; color:#FFFFFF }
-    .page-header h1{ margin:0; font-size:1.6rem }
-    .lead { color:#666; margin-top:6px; font-size:0.95rem }
-
-    .controls { display:flex; gap:8px; align-items:center; justify-content:flex-end; margin-bottom:12px }
-    .controls .filter { padding:6px 10px; border-radius:6px; border:1px solid #ddd; background:#fff }
-
-    .items-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px }
-    .item-card{ background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.06); overflow:hidden; display:flex; flex-direction:column }
-    .item-thumb{ background:#f4f6f8; padding:18px; display:flex; align-items:center; justify-content:center }
-    /* thumbnail background variants by rarity */
-    .item-thumb.common{ background:#f4f6f8 }
-    .item-thumb.uncommon{ background:#b7e34a }
-    .item-thumb.rare{ background:#1e3a8a }
-    .item-thumb.epic{ background:#9b59b6 }
-    .item-thumb.unique{ background:#ffff00 }
-    .item-thumb img{ max-width:100%; height:auto; width:96px; height:96px; object-fit:contain }
-    .item-body{ padding:12px; flex:1; display:flex; flex-direction:column }
-    .item-title{ display:flex; align-items:center; gap:8px; margin-bottom:8px }
-    .item-title h3{ margin:0; font-size:1.05rem }
-    .badge{ font-size:0.75rem; padding:4px 8px; border-radius:999px; background:#eee; color:#333 }
-    .item-type{ color:#5b6; font-weight:600; font-size:0.85rem }
-    .item-desc{ color:#444; font-size:0.9rem; margin:8px 0; flex:1 }
-    .item-stats{ display:flex; gap:8px; flex-wrap:wrap }
-    .stat{ background:#f3f7fb; padding:6px 8px; border-radius:6px; font-size:0.85rem; color:#114a7a }
-    .card-footer{ display:flex; justify-content:space-between; align-items:center; gap:8px; padding:12px; border-top:1px solid #f0f0f0 }
-    .card-footer .meta2{ color:#666; font-size:0.85rem }
-    .btn{ background:#2b6cb0; color:#fff; padding:8px 10px; border-radius:6px; text-decoration:none; font-weight:600 }
-
-    @media (max-width:480px){ .controls{ justify-content:space-between } .page{ padding:12px } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>アイテム一覧 | Dungeon Player2</title>
+<meta name="description" content="Dungeon Player2 に登場する武器・防具・アクセサリ・消耗品のアイテム一覧です。">
+<link rel="canonical" href="https://altomosoft.com/dungeonplayer2/dp2_items.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AltomoSoft">
+<meta property="og:title" content="アイテム一覧 | Dungeon Player2">
+<meta property="og:description" content="Dungeon Player2 に登場する武器・防具・アクセサリ・消耗品のアイテム一覧です。">
+<meta property="og:url" content="https://altomosoft.com/dungeonplayer2/dp2_items.html">
+<meta property="og:image" content="https://altomosoft.com/dungeonplayer2/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/styles.css?v=20260821b">
+<link rel="stylesheet" href="assets/pages.css?v=20260821b">
 </head>
-<body class="page page-dark">
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><a href="index.html">Dungeon Player2</a></div>
+  <div class="menu-scroll">
+    <nav class="menu" aria-label="サイトメニュー">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="dp2_information.html">【お知らせ】</a></li>
+
+        <li class="section">・ゲームシステム</li>
+        <li><a href="dp2_gamesystem.html">基本システム</a></li>
+
+        <li class="section">・キャラクター</li>
+        <li><a href="dp2_ein.html">アイン・ウォーレンス</a></li>
+        <li><a href="dp2_lana.html">ラナ・アミリア</a></li>
+        <li><a href="dp2_billy.html">ビリー・ラキ</a></li>
+        <li><a href="dp2_eone.html">エオネ・フルネア</a></li>
+        <li><a href="dp2_adel.html">アデル・ブリガンディ</a></li>
+
+        <li class="section">・エリア一覧</li>
+        <li><a href="dp2_town_anshet.html">アンシェット街</a></li>
+        <li><a href="dp2_dungeon_esmiliagrassfield.html">エスミリア草原区域</a></li>
+
+        <li class="section">・アイテム</li>
+        <li><a href="dp2_items.html" class="active">アイテム一覧</a></li>
+
+        <li class="section">・パラメタ</li>
+        <li><a href="dp2_param_core.html">コア</a></li>
+        <li><a href="dp2_param_battle.html">戦闘値</a></li>
+
+        <li class="section">・コマンド</li>
+        <li class="sub">魔法</li>
+        <li><a href="dp2_spell_fire.html">【炎】</a></li>
+        <li><a href="dp2_spell_ice.html">【氷】</a></li>
+        <li><a href="dp2_spell_light.html">【聖】</a></li>
+        <li><a href="dp2_spell_shadow.html">【闇】</a></li>
+        <li class="sub">スキル</li>
+        <li><a href="dp2_skill_warrior.html">【戦士】</a></li>
+        <li><a href="dp2_skill_guardian.html">【護衛】</a></li>
+        <li><a href="dp2_skill_martialarts.html">【格闘】</a></li>
+        <li><a href="dp2_skill_archery.html">【弓術】</a></li>
+
+        <li class="section">・その他</li>
+        <li><a href="diary.html">開発者日記</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="sidebar-footer">
+    2026 Altomo Software
+    <div class="contact">お問い合わせ: <a href="mailto:verze.artie@gmail.com">verze.artie@gmail.com</a></div>
+    <div class="social"><a href="https://x.com/Zhalman2026" target="_blank" rel="noopener">X (@Zhalman2026)</a></div>
+    <iframe src="count/count.php" height="70" width="140" frameborder="0" scrolling="no" title="アクセスカウンタ" loading="lazy"></iframe>
+  </div>
+</aside>
+<div class="overlay" id="overlay"></div>
+<main class="content">
+  <header class="content-header">
+    <button id="toggleMenu" class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
+    <p class="site-title"><a href="index.html">Dungeon Player2</a></p>
+    <a class="store-link" href="https://apps.apple.com/jp/app/id6745701290" target="_blank" rel="noopener">App Store で入手</a>
+  </header>
+  <div class="content-body page-items" id="main">
   <header class="page-header">
     <h1>アイテム一覧</h1>
   </header>
@@ -1272,6 +1302,9 @@
   </section>
 
   <footer style="text-align:center;margin:28px 0;color:#666;font-size:0.9rem">© 2026 AltomoSoft</footer>
-
+  </div>
+</main>
+</div>
+<script src="assets/menu.js"></script>
 </body>
 </html>
