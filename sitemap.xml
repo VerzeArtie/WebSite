@@ -26,32 +26,27 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://altomosoft.com/GameReview/NobunagaSinsei/Nobunaga_Sinsei.html</loc>
+  <url>
+    <loc>https://altomosoft.com/game-review/index.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+    <loc>https://altomosoft.com/game-review/nobunaga-sinsei/nobunaga-sinsei.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://altomosoft.com/GameReview/Victoria3/Victoria3.html</loc>
+    <loc>https://altomosoft.com/game-review/victoria-3/victoria-3.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://altomosoft.com/GameReview/Hoi4/Hearts_of_Iron_4.html</loc>
+    <loc>https://altomosoft.com/game-review/hearts-of-iron-4/hearts-of-iron-4.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://altomosoft.com/GameReview/AnonymousCode/AnonymousCode.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://altomosoft.com/GameReview/talos_principle.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://altomosoft.com/GameReview/zero_escape.html</loc>
+    <loc>https://altomosoft.com/game-review/zero-escape/zero-escape.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.7</priority>
   </url>
