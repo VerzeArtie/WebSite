@@ -1,0 +1,135 @@
+:root {
+  --bg: #0a0a0f;
+  --card: #14141d;
+  --line: #2a2140;
+  --text: #e6e6ef;
+  --muted: #9a9ab0;
+  --gold: #facc15;
+  --violet: #7c3aed;
+  --violet-soft: #a78bfa;
+}
+
+* { box-sizing: border-box; }
+
+html, body { background: var(--bg); }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", sans-serif;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+a { color: var(--violet-soft); }
+a:hover { color: var(--gold); }
+
+/* Hero */
+.hero { text-align: center; padding: 24px 0 32px; }
+.mark { width: 96px; height: 96px; display: block; margin: 0 auto 16px; }
+h1 {
+  margin: 0;
+  font-size: clamp(24px, 6vw, 36px);
+  line-height: 1.25;
+  color: var(--gold);
+  letter-spacing: 0.01em;
+}
+.sub { margin: 4px 0 20px; color: var(--violet-soft); font-size: 16px; letter-spacing: 0.2em; }
+.lead { margin: 0 auto 8px; max-width: 560px; font-size: 17px; }
+
+/* Japanese lines */
+.ja { color: var(--muted); }
+.lead.ja { font-size: 15px; }
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 0 0 16px;
+}
+.card p { margin: 0 0 6px; }
+.card p.ja { margin-bottom: 14px; }
+.card p.ja:last-child { margin-bottom: 0; }
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  color: var(--gold);
+}
+h2 span, h3 span {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--violet-soft);
+}
+h3 { margin: 4px 0 8px; font-size: 16px; }
+h3.small { margin-top: 18px; font-size: 14px; color: var(--text); }
+
+.note { color: var(--muted); font-size: 13px; margin-top: 12px !important; }
+
+/* Steps */
+.steps { margin: 12px 0 0; padding-left: 22px; }
+.steps li { margin-bottom: 12px; }
+.steps li::marker { color: var(--gold); font-weight: 700; }
+.steps .ja { display: block; font-size: 14px; }
+
+/* Timeline */
+.timeline { border-left: 2px solid var(--line); margin-left: 6px; padding-left: 18px; }
+.phase { position: relative; padding-bottom: 18px; }
+.phase:last-child { padding-bottom: 0; }
+.phase::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--violet-soft);
+}
+.phase.now::before { background: var(--gold); border-color: var(--gold); }
+.tag { margin: 0 !important; font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+.phase.now .tag { color: var(--gold); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.chips span {
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--bg);
+}
+
+/* Lists */
+.card ul { margin: 0; padding-left: 20px; }
+.card ul li { margin-bottom: 8px; }
+.card ul li:last-child { margin-bottom: 0; }
+
+.notice { border-color: rgba(250, 204, 21, 0.35); }
+
+/* Contracts */
+.contracts { margin: 8px 0 0; font-size: 13px; }
+.contracts dt { color: var(--muted); margin-top: 8px; }
+.contracts dd { margin: 0; overflow-wrap: anywhere; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+/* Footer */
+footer { text-align: center; padding-top: 16px; font-size: 13px; color: var(--muted); }
+footer p { margin: 0 0 4px; }
+footer .ja { font-size: 12px; }
+.copy { margin-top: 12px !important; }
+
+@media (min-width: 640px) {
+  main { padding-top: 48px; }
+  .card { padding: 24px 28px; }
+}
