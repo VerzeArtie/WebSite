@@ -76,6 +76,21 @@ h3.small { margin-top: 18px; font-size: 14px; color: var(--text); }
 
 .note { color: var(--muted); font-size: 13px; margin-top: 12px !important; }
 
+/* Open in World App button */
+.open-btn {
+  display: block;
+  margin-top: 16px;
+  padding: 12px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--gold);
+  border-radius: 12px;
+  text-decoration: none;
+}
+.open-btn:hover { color: var(--bg); opacity: 0.9; }
+.open-btn small { display: block; font-size: 12px; font-weight: 600; opacity: 0.75; }
+
 /* Steps */
 .steps { margin: 12px 0 0; padding-left: 22px; }
 .steps li { margin-bottom: 12px; }
