@@ -52,6 +52,10 @@
 .diary .entry .date{ display:inline-block; float:none; margin-bottom:4px }
 .past-updates summary{ cursor:pointer; color:var(--accent); font-weight:700; padding:6px 0 }
 .past-updates article{ margin-top:12px }
+.past-diary{ clear:both; margin-top:8px; border-top:1px dashed rgba(0,0,0,0.12); padding-top:4px }
+.past-diary summary{ cursor:pointer; color:var(--accent); font-weight:700; padding:6px 0; font-size:0.9rem }
+.past-diary:not(:has(> :not(summary))){ display:none }
+.past-diary .entry:first-of-type{ border-top:0; padding-top:0 }
 /* 雪原の背景（自作SVG、2026/11/18追加） */
 body{ background:#eef3f9 }
 body::before{ content:""; position:fixed; inset:0; z-index:-1; background:#eef3f9 url("image/bg-snowfield.svg") center bottom / cover no-repeat }
@@ -100,9 +104,11 @@ body::before{ content:""; position:fixed; inset:0; z-index:-1; background:#eef3f
 					<section class="diary">
 						<h1>管理人のひとこと</h1>
 						<!--
-							【追記方法】
-							下の <div class="entry"> ～ </div> をコピーして、この位置（一番上）に貼り付け、日付と本文を書き換えてください。
-							新しいものが上に来ます。古いものは適宜削除してください（目安3件ほど）。
+							【追記方法】（更新履歴と同じ運用です）
+							1. 今ここにある最新の <div class="entry"> ～ </div> を丸ごと切り取り、
+							   下の「過去のひとこと」の中、<summary> 行のすぐ下（一番上）に貼り付けます。
+							2. この位置に次の雛形を貼り付け、日付と本文を書き換えます。
+							   TOPに表示するのは常に最新1件だけです。過去分は削除せず残します。
 
 							<div class="entry">
 								<span class="date">YYYY/MM/DD</span>
@@ -110,9 +116,17 @@ body::before{ content:""; position:fixed; inset:0; z-index:-1; background:#eef3f
 							</div>
 						-->
 						<div class="entry">
-							<span class="date">2026/11/18</span>
-							<p>MTGアリーナでスタートレック入りデッキで奮闘中。スタートレックあまり知らないが、面白いセットだね。</p>
+							<span class="date">2026/11/20</span>
+							<p>DungeonPlayer2のアップデートは出来たが、中国向けの条件が厳しくなった様だ。難しい時代に入りましたね・・・</p>
 						</div>
+
+						<details class="past-diary">
+							<summary>過去のひとこと</summary>
+							<div class="entry">
+								<span class="date">2026/11/18</span>
+								<p>MTGアリーナでスタートレック入りデッキで奮闘中。スタートレックあまり知らないが、面白いセットだね。</p>
+							</div>
+						</details>
 					</section>
 				</div>
 
