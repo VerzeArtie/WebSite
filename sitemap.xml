@@ -16,6 +16,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://altomosoft.com/diary.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://altomosoft.com/game-review/elden-ring/elden-ring.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://altomosoft.com/game-review/talos-principle/talos-principle.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.7</priority>
