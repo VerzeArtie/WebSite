@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>ゲームレビュー | AltomoSoft</title>
-<meta name="description" content="AltomoSoft のゲームレビュー一覧。信長の野望・新生、Victoria 3、Hearts of Iron 4、Zero Escape などの感想と評価を掲載しています。">
-<meta name="author" content="AltomoSoft">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AltomoSoft のゲームレビュー一覧。信長の野望・新生、Victoria 3、Hearts of Iron 4、ELDEN RING などの感想と評価を掲載しています。">
+<meta name="author" content="AltomoSoft">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://altomosoft.com/game-review/index.html">
-
 <meta property="og:title" content="ゲームレビュー | AltomoSoft">
 <meta property="og:description" content="AltomoSoft のゲームレビュー一覧。プレイした作品の感想と評価を掲載しています。">
 <meta property="og:type" content="website">
@@ -19,17 +18,15 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
-
 <link href="../css/reset.css" rel="stylesheet" type="text/css">
 <link href="../css/css.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
 <link href="../css/modern.css" rel="stylesheet" type="text/css">
+<link href="review.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<header>
-		<h1>
-			<a href="../index.html" class="brand" aria-label="ホームへ戻る">AltomoSoft</a>
-		</h1>
+		<h1><a href="../index.html" class="brand" aria-label="ホームへ戻る">AltomoSoft</a></h1>
 	</header>
 
 	<nav class="full-bleed">
@@ -46,45 +43,60 @@
 	<main class="full-bleed">
 		<div class="inner">
 			<article>
-				<section>
+				<section class="review-intro">
 					<h1>ゲームレビュー</h1>
-					<p>プレイした作品の感想と評価です。順次追加していきます。</p>
+					<p>プレイした作品の感想と評価です。新しいものから順に並べています。</p>
 				</section>
 
-				<section>
-				<section>
-					<a href="talos-principle/talos-principle.html" style="text-decoration:none;color:inherit;display:block">
+				<section class="review-item">
+					<a href="elden-ring/elden-ring.html">
+						<h1>ELDEN RING</h1>
+						<p class="review-item-meta">ソウルライク／総合評価 100点／2026/11/20</p>
+						<p>ソウルライク。</p>
+					</a>
+				</section>
+
+				<section class="review-item">
+					<a href="talos-principle/talos-principle.html">
 						<h1>The Talos Principle</h1>
-						<p>思索型のパズルゲーム。主観的評価と感想。</p>
+						<p class="review-item-meta">パズル／総合 10 / 10／2026/08/27</p>
+						<p>思索型のパズルゲーム。</p>
 					</a>
 				</section>
 
-					<a href="zero-escape/zero-escape.html" style="text-decoration:none;color:inherit;display:block">
-						<h1>Zero Escape - 刻のジレンマ</h1>
-						<p>脱出アドベンチャー。主観的評価と感想。</p>
+				<section class="review-item">
+					<a href="hearts-of-iron-4/hearts-of-iron-4.html">
+						<h1>Hearts of Iron 4</h1>
+						<p class="review-item-meta">ストラテジー／総合評価 65点／2025/02/18</p>
+						<p>第二次世界大戦を題材にしたストラテジー。</p>
 					</a>
 				</section>
 
-				<section>
-					<a href="nobunaga-sinsei/nobunaga-sinsei.html" style="text-decoration:none;color:inherit;display:block">
-						<h1>信長の野望・新生</h1>
-						<p>歴史シミュレーション。グラフィック・音楽・ゲーム性・ストーリーの各項目と総合評価。</p>
-					</a>
-				</section>
-
-				<section>
-					<a href="victoria-3/victoria-3.html" style="text-decoration:none;color:inherit;display:block">
+				<section class="review-item">
+					<a href="victoria-3/victoria-3.html">
 						<h1>Victoria 3</h1>
+						<p class="review-item-meta">国家運営シミュレーション／総合評価 75点／2024/03/09</p>
 						<p>国家運営シミュレーション。異質さと本格性をどう評価するか。</p>
 					</a>
 				</section>
 
-				<section>
-					<a href="hearts-of-iron-4/hearts-of-iron-4.html" style="text-decoration:none;color:inherit;display:block">
-						<h1>Hearts of Iron 4</h1>
-						<p>第二次世界大戦を題材にしたストラテジー。</p>
+				<section class="review-item">
+					<a href="nobunaga-sinsei/nobunaga-sinsei.html">
+						<h1>信長の野望・新生</h1>
+						<p class="review-item-meta">歴史シミュレーション／総合評価 90点／2023/01/11</p>
+						<p>歴史シミュレーション。</p>
 					</a>
 				</section>
+
+				<section class="review-item">
+					<a href="zero-escape/zero-escape.html">
+						<h1>Zero Escape - 刻のジレンマ</h1>
+						<p class="review-item-meta">脱出アドベンチャー／総合 5 / 10／2016/07/15</p>
+						<p>脱出アドベンチャー。</p>
+					</a>
+				</section>
+
+				<!-- 新しいレビューを追加するときは、上の section.review-item を1つコピーして先頭（review-intro の直後）に入れる -->
 			</article>
 		</div>
 	</main>
